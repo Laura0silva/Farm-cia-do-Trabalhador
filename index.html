@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Farmácia do Trabalhador</title>
+        <link rel="stylesheet" type="text/css" href="estilo.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Farmácia do Trabalhador</h1>
+            <h3 style="text-shadow: 0 0 3px #ffffff, 0 0 5px #ffffff;">Escolha um dos nossos produtos em promoção!!</h3>
+        </header>
+        <div class="div">
+            <table style="size: 100%; margin-top: 2%;">
+                <tr>
+                    <td>
+                    <img src="imagens/acidoMandelico.png" alt="Ácido Mandélico">
+                    <p>Ácido Mandélico - Ideal para clarear manchas na pele!</p>
+                    <p>R$: <input id="acido" type="number" /></p><br />
+                    <p >
+                        Leve 2 por: <span id="promAcido"></span>
+                    </p>
+                    </td>
+
+                    <td>
+                    <img style="margin-left: 20%;" src="imagens/protetorSolar.png" alt="Ácido Mandélico">
+                    <p style="padding-left: 30px; padding-right: 30px;">Protetor solar de fps60 - Impede que a sua pele envelheça, 
+                    protege o rosto depois do tratamento com ácido</p>
+                    <p>R$: <input style="margin-left: 25px;" id="protetor" type="number" /></p><br />
+                    <p >
+                        Leve 2 por: <span id="promProtetor"></span>
+                    </p>
+                    </td>
+
+                    <td>
+                    <img src="imagens/gelLimpeza.png" alt="Ácido Mandélico">
+                    <p>Gel de Limpeza - Limpa sem deixar a pele ressecada</p><br />
+                    <p>R$: <input id="gel" type="number" /></p><br />
+                    <p >
+                        Leve 2 por: <span id="promGel"></span>
+                    </p>
+                    </td>
+                </tr>
+            </table>
+            <br /> <br />
+            <button style="margin-left: 45%; width: 160px; " onclick="calcular()">Calcular Promoção</button>
+            <table></table>
+        </div>
+        <footer>
+            <h3 style="margin-top: 60px; background-color: rgba(0, 0, 0, 0.61); padding: 15px; color: white; width: 70%; margin-left: 15%;">Últimos produtos disponíveis para compra! Não perca essa change 💕💖✨</h3>
+        </footer>
+
+        <script>
+            var Acido = document.querySelector('#acido')
+            var Protetor = document.querySelector('#protetor')
+            var Gel = document.querySelector('#gel')
+            var PromAcido = document.querySelector('#promAcido')
+            var PromProtetor = document.querySelector('#promProtetor')
+            var PromGel = document.querySelector('#promGel')
+    
+            function calcular(){
+                PromAcido.innerHTML = parseInt(Acido.value) * 2
+                PromProtetor.innerHTML = parseInt(Protetor.value) * 2 
+                PromGel.innerHTML = parseInt(Gel.value) * 2
+            }
+        </script>
+    
+    </body>
+</html>
